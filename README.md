@@ -7,9 +7,9 @@ A simple, responsive website for GitHub Pages.
 - `index.html`: your name, biography, experiences, and contact links.
 - `style.css`: colors, typography, and layout.
 - `script.js`: updates the copyright year.
-- `images/`: place your headshot here and replace the photo placeholder in `index.html` with the image markup shown in its comment.
+- `images/headshot.png`: your homepage portrait.
 
-The Berkeley email and headshot are placeholders until the actual details are provided. About and Experience are intentionally left for later.
+The Berkeley email is a placeholder until the actual address is provided. About and Experience are intentionally left for later.
 
 Open `index.html` in a browser to preview the site.
 
