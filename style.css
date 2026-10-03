@@ -34,6 +34,10 @@ h3 { margin: 0 0 8px; font-size: 20px; line-height: 1.35; }
 .reel-links { display: flex; flex-wrap: wrap; gap: 16px; }
 .reel-link { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding: 16px 20px; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
 .reel-link:hover { border-color: var(--accent); }
+.academic-details { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 24px; margin-top: 32px; }
+.academic-details h3 { font-size: 17px; }
+.academic-details ul { padding-left: 20px; margin: 12px 0 0; }
+.academic-details li + li { margin-top: 8px; }
 .contact-items { display: flex; flex-wrap: wrap; gap: 32px 80px; }
 .contact-items > div { display: flex; flex-direction: column; gap: 6px; }
 .contact-label { font-size: 13px; font-weight: 650; }
