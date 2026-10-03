@@ -9,7 +9,7 @@ a:focus-visible { outline: 3px solid var(--accent); outline-offset: 6px; }
 .site-header { display: flex; align-items: center; justify-content: space-between; padding-block: 28px; gap: 24px; }
 .wordmark { font-size: 20px; font-weight: 700; letter-spacing: -.5px; }
 .wordmark span { color: var(--accent); }
-nav { display: flex; gap: 28px; font-size: 14px; }
+nav { display: flex; flex-wrap: wrap; gap: 12px 24px; font-size: 14px; }
 .hero { display: grid; grid-template-columns: minmax(0, 1fr) 240px; align-items: center; gap: 64px; padding-block: 72px 88px; }
 .eyebrow { font-size: 11px; text-transform: uppercase; letter-spacing: 2px; font-weight: 650; color: var(--accent); margin: 0 0 20px; }
 h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; line-height: 1.1; letter-spacing: -2px; }
@@ -20,6 +20,20 @@ h2 { font-size: 38px; letter-spacing: -1px; margin: 0 0 24px; }
 .headshot { display: block; width: 240px; max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 8px 24px rgb(24 45 64 / 10%); }
 .content-section { border-top: 1px solid var(--line); padding-block: 48px 64px; }
 .placeholder-copy { color: var(--muted); }
+.organization-heading { display: flex; align-items: center; gap: 20px; margin-bottom: 32px; }
+.organization-logo { display: block; width: 64px; height: 64px; border-radius: 12px; }
+.organization-heading h2 { margin: 0 0 6px; }
+.role-meta { margin: 0; color: var(--muted); font-size: 14px; }
+h3 { margin: 0 0 8px; font-size: 20px; line-height: 1.35; }
+.roles { border-left: 2px solid var(--line); padding-left: 24px; }
+.role + .role { margin-top: 32px; }
+.role ul { padding-left: 20px; margin-bottom: 0; }
+.role li + li { margin-top: 12px; }
+.role p:not(.role-meta), .role li { max-width: 760px; }
+.reels { margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--line); }
+.reel-links { display: flex; flex-wrap: wrap; gap: 16px; }
+.reel-link { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding: 16px 20px; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+.reel-link:hover { border-color: var(--accent); }
 .contact-items { display: flex; flex-wrap: wrap; gap: 32px 80px; }
 .contact-items > div { display: flex; flex-direction: column; gap: 6px; }
 .contact-label { font-size: 13px; font-weight: 650; }
