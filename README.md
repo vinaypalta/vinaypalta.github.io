@@ -9,7 +9,7 @@ A simple, responsive website for GitHub Pages.
 - `script.js`: updates the copyright year.
 - `images/`: place your headshot here and replace the photo placeholder in `index.html` with the image markup shown in its comment.
 
-The Berkeley email, LinkedIn URL, and headshot are placeholders until the actual details are provided. About and Experience are intentionally left for later.
+The Berkeley email and headshot are placeholders until the actual details are provided. About and Experience are intentionally left for later.
 
 Open `index.html` in a browser to preview the site.
 
