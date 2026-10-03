@@ -29,7 +29,7 @@ nav a:last-child { border: 1px solid var(--line); padding: 9px 18px; }
 nav a:last-child::after { display: none; }
 nav a:last-child:hover, nav a:last-child[aria-current="page"] { background: var(--ink); color: var(--paper); }
 main { min-height: calc(100svh - 204px); }
-.hero { display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: 88px; align-items: center; min-height: calc(100svh - 204px); padding-block: 80px; }
+.hero { display: grid; grid-template-columns: minmax(0, 620px) 290px; gap: 40px; align-items: center; min-height: calc(100svh - 204px); padding-block: 80px; }
 .hero-copy { padding-block: 24px; }
 .eyebrow { margin: 0 0 28px; font-size: 10px; text-transform: uppercase; letter-spacing: 2.1px; font-weight: 500; color: var(--accent); }
 h1, h2 { font-family: var(--font-heading); font-weight: 400; letter-spacing: -2.5px; line-height: 1.06; text-wrap: balance; }
@@ -39,7 +39,7 @@ h1 span { display: block; }
 .intro strong { font-weight: 400; color: var(--ink); }
 .intro::before { content: ""; display: block; height: 1px; width: 52px; background: var(--accent); margin-bottom: 28px; }
 .portrait { margin: 0; position: relative; }
-.headshot { display: block; width: 260px; max-width: 100%; height: auto; border-radius: 2px; }
+.headshot { display: block; width: 290px; max-width: 100%; height: auto; border-radius: 2px; }
 .portrait figcaption { display: flex; justify-content: space-between; gap: 12px; padding-top: 15px; font-size: 10px; text-transform: uppercase; letter-spacing: 1.4px; color: var(--muted); }
 .content-section { padding-block: 76px 88px; max-width: 960px; }
 .content-section > h2 { font-size: clamp(42px, 5.5vw, 68px); margin: 0 0 42px; }
@@ -74,8 +74,8 @@ footer { min-height: 92px; border-top: 1px solid var(--line); display: flex; ali
 /* Section motion is triggered by script.js; reduced motion is respected there. */
 @media (max-width: 900px) {
   .site-header, main, footer { padding-inline: 36px; }
-  .hero { gap: 40px; grid-template-columns: minmax(0, 1fr) 220px; }
-  .headshot { width: 220px; }
+  .hero { gap: 28px; grid-template-columns: minmax(0, 1fr) 240px; }
+  .headshot { width: 240px; }
   nav { gap: 18px; }
   h1 { font-size: 68px; }
 }
@@ -87,12 +87,12 @@ footer { min-height: 92px; border-top: 1px solid var(--line); display: flex; ali
   nav a:last-child::after { display: block; }
   nav a:last-child:hover, nav a:last-child[aria-current="page"] { background: transparent; color: var(--ink); }
   main { min-height: calc(100svh - 230px); }
-  .hero { grid-template-columns: 1fr; min-height: auto; gap: 38px; padding-block: 48px 56px; }
+  .hero { grid-template-columns: 1fr; min-height: auto; gap: 28px; padding-block: 48px 56px; }
   .hero-copy { padding: 0; }
   h1 { font-size: clamp(56px, 13vw, 76px); }
   .intro { font-size: 17px; }
-  .portrait { width: 200px; }
-  .headshot { width: 200px; }
+  .portrait { width: 220px; max-width: 100%; }
+  .headshot { width: 220px; }
   .content-section { padding-block: 48px 60px; }
   .organization-heading { gap: 16px; }
   .organization-logo { width: 48px; height: 48px; }
