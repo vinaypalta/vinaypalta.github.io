@@ -9,7 +9,7 @@ A simple, responsive website for GitHub Pages.
 - `script.js`: updates the copyright year.
 - `images/headshot.png`: your homepage portrait.
 
-The Berkeley email is a placeholder until the actual address is provided. About and Experience are intentionally left for later.
+About and Experience are intentionally left for later.
 
 Open `index.html` in a browser to preview the site.
 
