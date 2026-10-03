@@ -5,35 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Vinay Palta — student at UC Berkeley. Personal website, experiences, and ways to connect.">
     <title>Vinay Palta</title>
-    <link rel="stylesheet" href="style.css?v=4">
+    <link rel="stylesheet" href="style.css?v=5">
   </head>
   <body>
     <header class="site-header">
       <a class="wordmark" href="#home">Vinay Palta<span>.</span></a>
       <nav aria-label="Main navigation">
+        <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#swingvision">SwingVision</a>
         <a href="#academics">Academics</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
-    <main id="home">
-      <section class="hero" aria-labelledby="intro-title">
+    <main>
+      <section id="home" class="hero" aria-labelledby="intro-title">
         <div>
-          <p class="eyebrow">University of California, Berkeley</p>
           <h1 id="intro-title">Hi, I'm Vinay.</h1>
-          <p class="intro">I'm a student at UC Berkeley. Welcome to my website.</p>
-          <a class="button" href="#about">A little about me <span aria-hidden="true">↗</span></a>
+          <p class="intro">I'm a student at UC Berkeley.</p>
         </div>
         <img class="headshot" src="images/headshot.png" alt="Vinay Palta" width="1028" height="1158" fetchpriority="high">
       </section>
-      <section id="about" class="content-section" aria-labelledby="about-title">
+      <section id="about" class="content-section" aria-labelledby="about-title" hidden>
         <p class="eyebrow">01 / Get to know me</p>
         <h2 id="about-title">A little about me</h2>
         <!-- Add your biography here when you're ready. -->
         <p class="placeholder-copy">More about me coming soon.</p>
       </section>
-      <section id="swingvision" class="content-section" aria-labelledby="swingvision-title">
+      <section id="swingvision" class="content-section" aria-labelledby="swingvision-title" hidden>
         <p class="eyebrow">02 / What I've been up to</p>
         <div class="organization-heading">
           <img class="organization-logo" src="images/swingvision-logo.jpeg" alt="SwingVision logo" width="200" height="200" loading="lazy">
@@ -67,7 +66,7 @@
           </div>
         </div>
       </section>
-      <section id="academics" class="content-section" aria-labelledby="academics-title">
+      <section id="academics" class="content-section" aria-labelledby="academics-title" hidden>
         <p class="eyebrow">03 / Education</p>
         <h2 id="academics-title">Berkeley Academics</h2>
         <h3>B.A. in Applied Mathematics</h3>
@@ -90,7 +89,7 @@
           </div>
         </div>
       </section>
-      <section id="contact" class="content-section" aria-labelledby="contact-title">
+      <section id="contact" class="content-section" aria-labelledby="contact-title" hidden>
         <p class="eyebrow">04 / Say hello</p>
         <h2 id="contact-title">Let's connect</h2>
         <div class="contact-items">
@@ -100,6 +99,6 @@
       </section>
     </main>
     <footer>© <span id="year">2026</span> Vinay Palta</footer>
-    <script src="script.js"></script>
+    <script src="script.js?v=2"></script>
   </body>
 </html>
