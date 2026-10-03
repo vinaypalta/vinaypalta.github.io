@@ -10,16 +10,14 @@ a:focus-visible { outline: 3px solid var(--accent); outline-offset: 6px; }
 .wordmark { font-size: 20px; font-weight: 700; letter-spacing: -.5px; }
 .wordmark span { color: var(--accent); }
 nav { display: flex; gap: 28px; font-size: 14px; }
-.hero { display: grid; grid-template-columns: 1.5fr 1fr; align-items: center; gap: 64px; padding-block: 90px 110px; }
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) 240px; align-items: center; gap: 64px; padding-block: 72px 88px; }
 .eyebrow { font-size: 11px; text-transform: uppercase; letter-spacing: 2px; font-weight: 650; color: var(--accent); margin: 0 0 20px; }
 h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; line-height: 1.1; letter-spacing: -2px; }
 h1 { font-size: clamp(48px, 7vw, 80px); margin: 0 0 24px; }
 h2 { font-size: 38px; letter-spacing: -1px; margin: 0 0 24px; }
 .intro { color: var(--muted); font-size: 19px; max-width: 460px; margin-bottom: 30px; }
 .button { display: inline-flex; gap: 28px; align-items: center; padding: 12px 20px; border: 1px solid var(--ink); border-radius: 6px; font-size: 14px; }
-.photo-placeholder, .headshot { width: 100%; aspect-ratio: 4 / 5; border-radius: 120px 120px 12px 12px; object-fit: cover; }
-.photo-placeholder { background: #e9ece3; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; color: var(--muted); font-size: 12px; }
-.initials { font-family: Georgia, serif; font-size: 80px; color: #879581; }
+.headshot { display: block; width: 240px; max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 8px 24px rgb(24 45 64 / 10%); }
 .content-section { border-top: 1px solid var(--line); padding-block: 48px 64px; }
 .placeholder-copy { color: var(--muted); }
 .contact-items { display: flex; flex-wrap: wrap; gap: 32px 80px; }
@@ -31,7 +29,7 @@ footer { padding-block: 28px; font-size: 12px; color: var(--muted); }
   .site-header { flex-wrap: wrap; }
   nav { gap: 20px; }
   .hero { grid-template-columns: 1fr; gap: 40px; padding-block: 48px 64px; }
-  .photo-placeholder, .headshot { max-width: 280px; }
+  .headshot { width: 200px; justify-self: start; }
   .content-section { padding-block: 36px 48px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
