@@ -13,6 +13,12 @@ About and Experience are intentionally left for later.
 
 Open `index.html` in a browser to preview the site.
 
+## Fonts and layout
+
+In `style.css`, the `:root` block contains `--font-body` (navigation and paragraphs), `--font-heading` (large titles), and the site's color variables. Change these to adjust the overall design. The `h1` and `h2` rules control title sizes; `.hero` controls the homepage columns and spacing; `.headshot` controls the photo size. Rules inside `@media` adapt the layout for smaller screens.
+
+In `index.html`, edit text between the HTML tags. Each `main` section is a separate view. Keep section IDs and navigation links matched. `script.js` controls section switching and transitions, including browser Back and reduced-motion support.
+
 ## Publish updates
 
 ```bash
