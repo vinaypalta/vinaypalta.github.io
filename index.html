@@ -3,111 +3,386 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Vinay Palta — student at UC Berkeley. Personal website, experiences, and ways to connect.">
-    <title>Vinay Palta</title>
-    <link rel="stylesheet" href="style.css?v=9">
+    <title>Vinay Palta — Applied Mathematics, UC Berkeley</title>
+    <meta name="description" content="Vinay Palta studies Applied Mathematics at UC Berkeley and works as a data analyst at SwingVision. Experience, education, and ways to connect.">
+    <meta name="author" content="Vinay Palta">
+    <meta name="theme-color" content="#0a1b33">
+    <link rel="canonical" href="https://vinaypalta.github.io/">
+
+    <!-- Link previews (LinkedIn, iMessage, X, Slack) -->
+    <meta property="og:type" content="profile">
+    <meta property="og:site_name" content="Vinay Palta">
+    <meta property="og:title" content="Vinay Palta — Applied Mathematics, UC Berkeley">
+    <meta property="og:description" content="Data, markets, and the numbers behind decisions.">
+    <meta property="og:url" content="https://vinaypalta.github.io/">
+    <meta property="og:image" content="https://vinaypalta.github.io/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Vinay Palta — UC Berkeley, Applied Mathematics">
+    <meta property="profile:first_name" content="Vinay">
+    <meta property="profile:last_name" content="Palta">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vinay Palta — Applied Mathematics, UC Berkeley">
+    <meta name="twitter:description" content="Data, markets, and the numbers behind decisions.">
+    <meta name="twitter:image" content="https://vinaypalta.github.io/images/og-image.jpg">
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="images/headshot.webp" type="image/webp">
+    <link rel="stylesheet" href="style.css?v=23">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Vinay Palta",
+      "url": "https://vinaypalta.github.io/",
+      "image": "https://vinaypalta.github.io/images/headshot.jpg",
+      "jobTitle": "Data Analyst",
+      "worksFor": { "@type": "Organization", "name": "SwingVision" },
+      "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of California, Berkeley" },
+      "email": "mailto:vpalta@berkeley.edu",
+      "sameAs": ["https://www.linkedin.com/in/vinaypalta"]
+    }
+    </script>
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="progress" aria-hidden="true"><span></span></div>
+
     <header class="site-header">
-      <a class="wordmark" href="#home">Vinay Palta<span>.</span></a>
-      <nav aria-label="Main navigation">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#swingvision">SwingVision</a>
-        <a href="#academics">Academics</a>
-        <a href="#contact">Contact</a>
-      </nav>
+      <div class="wrap header-inner">
+        <a class="monogram" href="#top" aria-label="Vinay Palta — back to top">
+          <span class="monogram-mark">VP</span>
+          <span class="monogram-name">Vinay Palta</span>
+        </a>
+        <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">
+          <span class="sr-only">Menu</span><span class="bars" aria-hidden="true"></span>
+        </button>
+        <nav id="site-nav" aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#education">Education</a>
+          <a href="#court">On the court</a>
+          <a class="nav-cta" href="#contact">Contact</a>
+        </nav>
+      </div>
     </header>
-    <main>
-      <section id="home" class="hero" aria-labelledby="intro-title">
-        <div class="hero-copy">
-          <p class="eyebrow">University of California, Berkeley</p>
-          <h1 id="intro-title"><span>Hi, I'm</span> <span>Vinay Palta.</span></h1>
-          <p class="intro">I'm a student at <strong>UC Berkeley.</strong></p>
+
+    <main id="main">
+      <!-- HERO -->
+      <section id="top" class="hero">
+        <div class="hero-grid-lines" aria-hidden="true"></div>
+        <div class="wrap hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow hero-line" style="--d:0">UC Berkeley · Applied Mathematics</p>
+            <h1 class="hero-line" style="--d:1">Vinay <em>Palta</em></h1>
+            <p class="lede hero-line" style="--d:2">
+              Applied math at Berkeley, with a soft spot for the moment a pile of numbers turns into a decision.
+              I do that with sports data at <strong>SwingVision</strong> and with small businesses on
+              <strong>Goldman Sachs 10,000 Small Businesses</strong>.
+            </p>
+            <div class="hero-actions hero-line" style="--d:3">
+              <a class="btn btn-gold" href="#experience">View experience <span aria-hidden="true">→</span></a>
+              <a class="btn btn-ghost" href="#contact">Get in touch</a>
+            </div>
+          </div>
+          <figure class="hero-portrait hero-line" style="--d:2">
+            <div class="portrait-frame">
+              <picture>
+                <source srcset="images/headshot.webp" type="image/webp">
+                <img src="images/headshot.jpg" alt="Portrait of Vinay Palta" width="800" height="913" fetchpriority="high">
+              </picture>
+            </div>
+            <figcaption><span>Berkeley, CA</span><span>Class of 2029</span></figcaption>
+          </figure>
         </div>
-        <figure class="portrait">
-          <img class="headshot" src="images/headshot.png" alt="Vinay Palta" width="1028" height="1158" fetchpriority="high">
-          <figcaption>VINAY PALTA</figcaption>
-        </figure>
+        <a class="scroll-cue" href="#about" aria-label="Scroll to About"><span></span></a>
       </section>
-      <section id="about" class="content-section" aria-labelledby="about-title" hidden>
-        <p class="eyebrow">01 / Get to know me</p>
-        <h2 id="about-title">A little about me</h2>
-        <!-- Add your biography here when you're ready. -->
-        <p class="placeholder-copy">More about me coming soon.</p>
-      </section>
-      <section id="swingvision" class="content-section" aria-labelledby="swingvision-title" hidden>
-        <p class="eyebrow">02 / What I've been up to</p>
-        <div class="organization-heading">
-          <img class="organization-logo" src="images/swingvision-logo.jpeg" alt="SwingVision logo" width="200" height="200" loading="lazy">
-          <div>
-            <h2 id="swingvision-title">SwingVision</h2>
-            <p class="role-meta">Internship · Berkeley, California · On-site</p>
+
+      <!-- KEY FIGURES -->
+      <section class="figures" aria-label="Key figures">
+        <div class="wrap figures-grid">
+          <div class="figure reveal">
+            <p class="figure-num"><span data-count="1" data-suffix="B+">1B+</span></p>
+            <p class="figure-label">Shots in the datasets I analyze</p>
+          </div>
+          <div class="figure reveal">
+            <p class="figure-num"><span data-count="500" data-suffix="K+">500K+</span></p>
+            <p class="figure-label">Users behind those insights</p>
+          </div>
+          <div class="figure reveal">
+            <p class="figure-num"><span data-count="4700" data-suffix="+">4,700+</span></p>
+            <p class="figure-label">Verified computer-vision annotations</p>
+          </div>
+          <div class="figure reveal">
+            <p class="figure-num"><span data-count="300" data-suffix="K+">300K+</span></p>
+            <p class="figure-label">Views on my tennis &amp; pickleball content</p>
           </div>
         </div>
-        <div class="roles">
-          <article class="role">
-            <h3>Marketing Data Analyst</h3>
-            <p class="role-meta">June 2026 – Present</p>
-            <ul>
-              <li>Analyzed user and performance datasets across 1B+ shots and 500K+ users using SQL and Python, delivering insights that shaped marketing content and customer-targeting strategy.</li>
-              <li>Generated 4,700+ human-verified annotations in Encord across ball-reconstruction and pickleball footage to train and validate production computer-vision models.</li>
-              <li>Sourced and curated user-generated content for SwingVision, generating 170K+ views.</li>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section">
+        <div class="wrap split">
+          <header class="section-head reveal">
+            <p class="kicker"><span>01</span> Profile</p>
+            <h2>Rigor first, then the story.</h2>
+          </header>
+          <div class="prose reveal">
+            <p class="prose-lead">
+              I like problems where the math has to hold up and the answer still has to make sense to
+              someone who will never see the math.
+            </p>
+            <p>
+              That started in a Columbia lab, where a year of metabolomics data taught me how much careful
+              analysis it takes to say one true thing. Now I apply it to people: how players use a sports app,
+              and how small-business owners find their way into a program built to help them grow.
+            </p>
+            <p>
+              I'm building toward a career in finance, where the same habits matter most: be precise,
+              be skeptical of a clean-looking number, and explain it clearly.
+            </p>
+            <ul class="pillars">
+              <li><span class="pillar-n">i.</span> Quantitative analysis</li>
+              <li><span class="pillar-n">ii.</span> Data storytelling</li>
+              <li><span class="pillar-n">iii.</span> Finance &amp; consulting</li>
             </ul>
-          </article>
-          <article class="role">
-            <h3>Data Labeller</h3>
-            <p class="role-meta">March 2026 – May 2026</p>
-            <p>Labeled 1,000+ high-volume video datasets for computer vision models, ensuring &gt;95% accuracy and improving model training reliability.</p>
-          </article>
-        </div>
-        <div class="reels">
-          <h3>Reels &amp; content</h3>
-          <p class="placeholder-copy">A selection of SwingVision content on Instagram.</p>
-          <div class="reel-links">
-            <a class="reel-link" href="https://www.instagram.com/p/DdE9dBwP9kK/" target="_blank" rel="noopener noreferrer">Watch reel 01 <span aria-hidden="true">↗</span></a>
-            <a class="reel-link" href="https://www.instagram.com/p/DcOzZh5hBcR/" target="_blank" rel="noopener noreferrer">Watch reel 02 <span aria-hidden="true">↗</span></a>
           </div>
         </div>
       </section>
-      <section id="academics" class="content-section" aria-labelledby="academics-title" hidden>
-        <p class="eyebrow">03 / Education</p>
-        <div class="organization-heading">
-          <img class="organization-logo berkeley-logo" src="images/berkeley-logo.png" alt="University of California, Berkeley seal" width="225" height="225" loading="lazy">
-          <h2 id="academics-title">UC Berkeley</h2>
-        </div>
-        <h3>B.A. in Applied Mathematics</h3>
-        <p class="role-meta">University of California, Berkeley · July 2025 – Present · Expected graduation: 2029</p>
-        <div class="academic-details">
-          <div>
-            <h3>Relevant coursework</h3>
-            <ul>
-              <li>Foundations of Data Science</li>
-              <li>Linear Algebra and Differential Equations</li>
-              <li>Structure and Interpretation of Computer Programs</li>
-            </ul>
+
+      <!-- EXPERIENCE -->
+      <section id="experience" class="section section-tint">
+        <div class="wrap">
+          <header class="section-head reveal">
+            <p class="kicker"><span>02</span> Experience</p>
+            <h2>Where I've been doing the work.</h2>
+          </header>
+
+          <div class="timeline">
+            <article class="org reveal">
+              <div class="org-rail">
+                <img class="org-logo" src="images/swingvision-logo.jpeg" alt="SwingVision logo" width="200" height="200" loading="lazy">
+              </div>
+              <div class="org-body">
+                <div class="org-top">
+                  <h3>SwingVision</h3>
+                  <p class="date">Data Analyst · 2026 — Now</p>
+                </div>
+                <p class="story">
+                  SwingVision records every shot a player hits. My job is to work out what more than a billion of
+                  those shots, from half a million players, say about the people hitting them, and to turn that
+                  into marketing and product decisions.
+                </p>
+                <ul class="highlights">
+                  <li><span class="hl-k">Find the signal</span><span>Sampling and exploratory work across ratings, demographics, subscription tiers, and improvement curves to spot where players engage and where they drift off.</span></li>
+                  <li><span class="hl-k">Make it usable</span><span>A marketing insights dashboard that managers use to decide which content to make and which segments to target.</span></li>
+                  <li><span class="hl-k">Train the models</span><span>4,700+ human-checked annotations that feed the computer-vision models behind the app.</span></li>
+                </ul>
+                <div class="sv-reels">
+                  <p class="links-label">Content I sourced and produced</p>
+            <div class="phones phones-inline">
+              <figure class="phone">
+                <div class="phone-screen">
+                  <iframe src="https://www.instagram.com/p/DdE9dBwP9kK/embed/" title="SwingVision reel 01 on Instagram" loading="lazy" scrolling="no" allowtransparency="true" allow="encrypted-media; picture-in-picture"></iframe>
+                </div>
+                <figcaption><a class="text-link" href="https://www.instagram.com/p/DdE9dBwP9kK/" target="_blank" rel="noopener noreferrer">Open on Instagram <span aria-hidden="true">↗</span></a></figcaption>
+              </figure>
+              <figure class="phone">
+                <div class="phone-screen">
+                  <iframe src="https://www.instagram.com/p/DcOzZh5hBcR/embed/" title="SwingVision reel 02 on Instagram" loading="lazy" scrolling="no" allowtransparency="true" allow="encrypted-media; picture-in-picture"></iframe>
+                </div>
+                <figcaption><a class="text-link" href="https://www.instagram.com/p/DcOzZh5hBcR/" target="_blank" rel="noopener noreferrer">Open on Instagram <span aria-hidden="true">↗</span></a></figcaption>
+              </figure>
+            </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="org reveal">
+              <div class="org-rail">
+                <div class="org-logo org-logo-text" aria-hidden="true">GS</div>
+              </div>
+              <div class="org-body">
+                <div class="org-top">
+                  <h3>Goldman Sachs 10,000 Small Businesses</h3>
+                  <p class="date">Consultant · 2026 — Now</p>
+                </div>
+                <p class="story">
+                  Through <a class="inline-link" href="https://microfinanceatberkeley.com/" target="_blank" rel="noopener noreferrer">Microfinance at Berkeley</a>,
+                  I work on the front of the funnel for Goldman's small-business program: getting more owners to apply,
+                  and making applying less painful once they do.
+                </p>
+                <ul class="highlights">
+                  <li><span class="hl-k">Outreach</span><span>Widening the pipeline of small businesses that hear about, and apply to, the program.</span></li>
+                  <li><span class="hl-k">Process</span><span>Streamlining and automating the application so it takes owners less time to finish.</span></li>
+                  <li><span class="hl-k">Capital access</span><span>Supporting MFB's Kiva sponsorships, which put interest-free loans in front of small-business owners.</span></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="org reveal">
+              <div class="org-rail">
+                <div class="org-logo org-logo-text" aria-hidden="true">CU</div>
+              </div>
+              <div class="org-body">
+                <div class="org-top">
+                  <h3>Columbia University</h3>
+                  <p class="date">Researcher · 2024 — 2025</p>
+                </div>
+                <p class="story">
+                  My first serious dataset: metabolomics from zebrafish bred to model Batten disease, a rare
+                  neurodegenerative disorder, at the Mailman School of Public Health.
+                </p>
+                <ul class="highlights">
+                  <li><span class="hl-k">The finding</span><span>PCA and clustering in R separated diseased fish from healthy ones; five metabolites, N-acetyl-L-aspartate among them, drove the difference.</span></li>
+                  <li><span class="hl-k">The write-up</span><span>Primary author on the research abstract, presented to the exposomics lab and outside collaborators.</span></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="org reveal">
+              <div class="org-rail">
+                <div class="org-logo org-logo-text" aria-hidden="true">CAL</div>
+              </div>
+              <div class="org-body">
+                <div class="org-top">
+                  <h3>Cal Men's Tennis</h3>
+                  <p class="date">Team Manager · 2025 — Now</p>
+                </div>
+                <p class="story">
+                  Where my day job meets the team. I run SwingVision and multi-angle cameras at practices and matches,
+                  then work with Berkeley's Sports Analytics Group to turn that footage into performance analysis coaches can act on.
+                </p>
+              </div>
+            </article>
           </div>
-          <div>
-            <h3>Activities</h3>
-            <ul>
-              <li><a href="https://berkeley.mt/" target="_blank" rel="noopener noreferrer">Berkeley Math Tournament</a></li>
-              <li><a href="https://californiaclubtennis.com/" target="_blank" rel="noopener noreferrer">Cal Club Tennis</a></li>
-              <li><a href="https://microfinanceatberkeley.com/" target="_blank" rel="noopener noreferrer">Microfinance at Berkeley</a></li>
-              <li><a href="https://www.instagram.com/pickleballatberkeley/" target="_blank" rel="noopener noreferrer">Pickleball at Berkeley</a></li>
+        </div>
+      </section>
+
+      <!-- EDUCATION -->
+      <section id="education" class="section">
+        <div class="wrap">
+          <header class="section-head reveal">
+            <p class="kicker"><span>03</span> Education</p>
+            <h2>Trained in the math behind the models.</h2>
+          </header>
+
+          <div class="edu reveal">
+            <div class="edu-main">
+              <img class="edu-seal" src="images/berkeley-logo.png" alt="UC Berkeley seal" width="225" height="225" loading="lazy">
+              <div>
+                <h3>University of California, Berkeley</h3>
+                <p class="meta">B.A. Applied Mathematics · Class of 2029</p>
+              </div>
+            </div>
+            <div class="edu-cols">
+              <div>
+                <h4 class="col-label">Coursework so far</h4>
+                <ul class="clean-list">
+                  <li>Probability</li>
+                  <li>Discrete Mathematics</li>
+                  <li>Linear Algebra &amp; Differential Equations</li>
+                  <li>Data Science (Data 8)</li>
+                  <li>Data Structures &amp; Programming (CS 61A / 61B)</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="col-label">On campus</h4>
+                <ul class="clean-list">
+                  <li><a href="https://microfinanceatberkeley.com/" target="_blank" rel="noopener noreferrer">Microfinance at Berkeley</a></li>
+                  <li><a href="https://berkeley.mt/" target="_blank" rel="noopener noreferrer">Berkeley Math Tournament</a></li>
+                  <li><a href="https://californiaclubtennis.com/" target="_blank" rel="noopener noreferrer">Cal Club Tennis</a></li>
+                  <li><a href="https://www.instagram.com/pickleballatberkeley/" target="_blank" rel="noopener noreferrer">Pickleball at Berkeley</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="edu edu-secondary reveal">
+            <div class="edu-main">
+              <div class="edu-seal edu-seal-text" aria-hidden="true">CU</div>
+              <div>
+                <h3>Columbia University</h3>
+                <p class="meta">Visiting student · Summer 2024</p>
+              </div>
+              <p class="edu-badge">Multivariable Calculus · <strong>A+</strong></p>
+            </div>
+          </div>
+
+          <div class="skills reveal">
+            <h4 class="col-label">Toolkit</h4>
+            <ul class="chips">
+              <li>Python</li><li>SQL</li><li>R</li><li>Java</li><li>Jupyter</li><li>Excel</li><li>PowerPoint</li><li>Encord</li><li>MS-DIAL</li>
             </ul>
           </div>
         </div>
       </section>
-      <section id="contact" class="content-section" aria-labelledby="contact-title" hidden>
-        <p class="eyebrow">04 / Say hello</p>
-        <h2 id="contact-title">Let's connect</h2>
-        <div class="contact-items">
-          <div><span class="contact-label">Berkeley email</span><a href="mailto:vpalta@berkeley.edu">vpalta@berkeley.edu</a></div>
-          <div><span class="contact-label">LinkedIn</span><a href="https://www.linkedin.com/in/vinay-palta-936961373">Connect with me ↗</a></div>
+
+      <!-- ON THE COURT -->
+      <section id="court" class="section section-tint">
+        <div class="wrap">
+          <div class="split court-split">
+            <header class="section-head reveal">
+              <p class="kicker"><span>04</span> On the court</p>
+              <h2>Where the data comes from.</h2>
+            </header>
+            <p class="court-intro reveal">
+              Most of my work sits close to a tennis court, and so does most of my free time.
+              Playing, filming, and posting are how I learned what players care about, which makes me
+              a better analyst of the data they generate.
+            </p>
+          </div>
+
+          <div class="tiles tiles-3">
+            <div class="tile reveal">
+              <p class="tile-n">Tennis</p>
+              <h3>Sectionals champions</h3>
+              <p>With Cal Club Tennis.</p>
+            </div>
+            <div class="tile reveal">
+              <p class="tile-n">Pickleball</p>
+              <h3>Pickleball at Berkeley</h3>
+              <p>Club team member, and a sport SwingVision tracks too.</p>
+            </div>
+            <div class="tile reveal">
+              <p class="tile-n">Content</p>
+              <h3>300K+ views</h3>
+              <p>Short-form tennis and pickleball videos on my own accounts.</p>
+            </div>
+          </div>
+
+          <p class="offcourt reveal">Off the court: classical piano, a Rubik's cube, and the occasional round of golf.</p>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="contact">
+        <div class="wrap contact-inner reveal">
+          <p class="kicker kicker-light"><span>05</span> Contact</p>
+          <h2>Let's talk.</h2>
+          <p class="contact-lede">Recruiting, a project, or just talking tennis analytics. I reply quickly.</p>
+          <div class="contact-actions">
+            <a class="btn btn-gold" href="mailto:vpalta@berkeley.edu">vpalta@berkeley.edu</a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/vinaypalta" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+          </div>
         </div>
       </section>
     </main>
-    <footer><span>© <span id="year">2026</span> Vinay Palta</span><span class="footer-location">Berkeley, California</span></footer>
-    <script src="script.js?v=3"></script>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <span>© <span id="year">2026</span> Vinay Palta</span>
+        <span>Berkeley, California</span>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <script src="script.js?v=20" defer></script>
   </body>
 </html>

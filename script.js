@@ -1,54 +1,99 @@
-// Keep the footer year up to date.
-document.getElementById('year').textContent = new Date().getFullYear();
+// Vinay Palta — site interactions. No dependencies.
+(() => {
+  const root = document.documentElement;
+  const body = document.body;
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  root.classList.add('js');
 
-// Each hash opens one section; browser Back and direct links work too.
-const sections = [...document.querySelectorAll('main > section')];
-const navigation = [...document.querySelectorAll('nav a')];
-const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-let currentSection;
-let transitionNumber = 0;
+  // Footer year
+  const year = document.getElementById('year');
+  if (year) year.textContent = new Date().getFullYear();
 
-async function showSection() {
-  const requested = window.location.hash.slice(1) || 'home';
-  const next = sections.find(section => section.id === requested) || sections[0];
-  const transition = ++transitionNumber;
-  sections.forEach(section => section.getAnimations().forEach(animation => animation.cancel()));
+  // Hero entrance once the page has painted
+  requestAnimationFrame(() => requestAnimationFrame(() => body.classList.add('is-loaded')));
 
-  if (currentSection && currentSection !== next && !reduceMotion.matches) {
-    try {
-      await currentSection.animate(
-        [{ opacity: 1, transform: 'translateY(0)' }, { opacity: 0, transform: 'translateY(-8px)' }],
-        { duration: 130, easing: 'ease-in', fill: 'forwards' }
-      ).finished;
-    } catch { /* A newer navigation cancels the previous transition. */ }
-  }
-  if (transition !== transitionNumber) return;
+  // Header state + scroll progress
+  const header = document.querySelector('.site-header');
+  const bar = document.querySelector('.progress span');
+  let ticking = false;
+  const onScroll = () => {
+    const y = window.scrollY;
+    header.classList.toggle('is-scrolled', y > 40);
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    if (bar) bar.style.transform = `scaleX(${max > 0 ? Math.min(y / max, 1) : 0})`;
+    ticking = false;
+  };
+  window.addEventListener('scroll', () => {
+    if (!ticking) { requestAnimationFrame(onScroll); ticking = true; }
+  }, { passive: true });
+  onScroll();
 
-  const changed = currentSection !== next;
-  sections.forEach(section => {
-    section.getAnimations().forEach(animation => animation.cancel());
-    section.hidden = section !== next;
+  // Mobile menu
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.getElementById('site-nav');
+  const setMenu = open => {
+    body.classList.toggle('menu-open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+  };
+  toggle.addEventListener('click', () => setMenu(!body.classList.contains('menu-open')));
+  nav.addEventListener('click', e => { if (e.target.closest('a')) setMenu(false); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+
+  // Scroll reveal, staggered within each parent
+  const reveals = [...document.querySelectorAll('.reveal')];
+  reveals.forEach(el => {
+    const siblings = [...el.parentElement.children].filter(c => c.classList.contains('reveal'));
+    el.style.setProperty('--stagger', `${siblings.indexOf(el) * 90}ms`);
   });
-  navigation.forEach(link => {
-    if (link.hash === '#' + next.id) link.setAttribute('aria-current', 'page');
-    else link.removeAttribute('aria-current');
-  });
-  document.title = next.id === 'home' ? 'Vinay Palta' : next.querySelector('h2').textContent + ' | Vinay Palta';
-  window.scrollTo({ top: 0, behavior: 'instant' });
 
-  if (currentSection && changed) {
-    const heading = next.querySelector('h1, h2');
-    heading.setAttribute('tabindex', '-1');
-    heading.focus({ preventScroll: true });
-  }
-  currentSection = next;
-  if (changed && !reduceMotion.matches) {
-    next.animate(
-      [{ opacity: 0, transform: 'translateY(12px)' }, { opacity: 1, transform: 'translateY(0)' }],
-      { duration: 380, easing: 'cubic-bezier(.2,.7,.2,1)' }
-    );
-  }
-}
+  // Count-up for key figures
+  const format = n => n.toLocaleString('en-US');
+  const countUp = el => {
+    const target = Number(el.dataset.count);
+    const suffix = el.dataset.suffix || '';
+    if (reduceMotion) { el.textContent = format(target) + suffix; return; }
+    const duration = 1600;
+    const start = performance.now();
+    const step = now => {
+      const t = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - t, 4);
+      el.textContent = format(Math.round(target * eased)) + suffix;
+      if (t < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  };
 
-window.addEventListener('hashchange', showSection);
-showSection();
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-in');
+        entry.target.querySelectorAll('[data-count]').forEach(countUp);
+        io.unobserve(entry.target);
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+    reveals.forEach(el => io.observe(el));
+
+    // Highlight the nav link for the section in view
+    const links = [...nav.querySelectorAll('a[href^="#"]')];
+    const sections = links.map(l => document.querySelector(l.hash)).filter(Boolean);
+    const spy = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        links.forEach(l => l.classList.toggle('is-active', l.hash === '#' + entry.target.id));
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    sections.forEach(s => spy.observe(s));
+  } else {
+    reveals.forEach(el => el.classList.add('is-in'));
+  }
+
+  // Gentle parallax on the portrait (desktop only)
+  const portrait = document.querySelector('.portrait-frame');
+  if (portrait && !reduceMotion && window.matchMedia('(min-width: 821px)').matches) {
+    window.addEventListener('scroll', () => {
+      const y = Math.min(window.scrollY, window.innerHeight);
+      portrait.style.transform = `translateY(${y * 0.08}px)`;
+    }, { passive: true });
+  }
+})();

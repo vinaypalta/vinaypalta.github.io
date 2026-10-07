@@ -1,30 +1,12 @@
-# Vinay Palta's personal website
+# vinaypalta.github.io
 
-A simple, responsive website for GitHub Pages.
+Personal site for Vinay Palta, served by GitHub Pages from `main` / root.
 
-## Edit the site
+- `index.html`: all content (hero, key figures, profile, experience, education, beyond, contact) plus SEO and link-preview tags.
+- `style.css`: colors and fonts live in `:root` (navy / ivory / gold, Newsreader + Inter).
+- `script.js`: header state, scroll progress, reveal-on-scroll, count-up figures, mobile menu, active-section nav.
+- `images/og-image.jpg`: the 1200×630 preview shown when the link is shared on LinkedIn, iMessage, etc.
+- `404.html`, `robots.txt`, `sitemap.xml`, `favicon.svg`: GitHub Pages extras.
 
-- `index.html`: your name, biography, experiences, and contact links.
-- `style.css`: colors, typography, and layout.
-- `script.js`: updates the copyright year.
-- `images/headshot.png`: your homepage portrait.
-
-About and Experience are intentionally left for later.
-
-Open `index.html` in a browser to preview the site.
-
-## Fonts and layout
-
-In `style.css`, the `:root` block contains `--font-body` (navigation and paragraphs), `--font-heading` (large titles), and the site's color variables. Change these to adjust the overall design. The `h1` and `h2` rules control title sizes; `.hero` controls the homepage columns and spacing; `.headshot` controls the photo size. Rules inside `@media` adapt the layout for smaller screens.
-
-In `index.html`, edit text between the HTML tags. Each `main` section is a separate view. Keep section IDs and navigation links matched. `script.js` controls section switching and transitions, including browser Back and reduced-motion support.
-
-## Publish updates
-
-```bash
-git add index.html style.css script.js images README.md
-git commit -m "Update personal website"
-git push
-```
-
-In the repository's Settings → Pages, publish from the `main` branch and `/ (root)` folder.
+To change a key figure, edit both the visible text and `data-count` / `data-suffix` on the `<span>`.
+After editing CSS or JS, bump the `?v=` number in `index.html` so browsers fetch the new file.
