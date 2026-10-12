@@ -97,3 +97,22 @@
     }, { passive: true });
   }
 })();
+
+// Lightbox for interest photos
+(() => {
+  const box = document.querySelector('.lightbox');
+  if (!box) return;
+  const img = box.querySelector('img');
+  let last;
+  const close = () => { box.hidden = true; document.body.style.overflow = ''; if (last) last.focus(); };
+  document.querySelectorAll('.ph[data-full]').forEach(btn => btn.addEventListener('click', () => {
+    last = btn;
+    img.src = btn.dataset.full;
+    img.alt = btn.querySelector('img').alt;
+    box.hidden = false;
+    document.body.style.overflow = 'hidden';
+    box.querySelector('.lightbox-close').focus();
+  }));
+  box.addEventListener('click', e => { if (e.target !== img) close(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !box.hidden) close(); });
+})();
