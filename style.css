@@ -236,3 +236,7 @@ h2 { margin: 0; font-size: clamp(32px, 4vw, 44px); font-weight: 600; line-height
   *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; transition-delay: 0ms !important; }
   .hero-line, .js .reveal { opacity: 1 !important; transform: none !important; }
 }
+
+/* Interests: logo and copy centered in the info column */
+.feat-info { text-align: center; }
+.feat-logo { margin-left: auto; margin-right: auto; }
