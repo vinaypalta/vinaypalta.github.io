@@ -88,14 +88,6 @@
     reveals.forEach(el => el.classList.add('is-in'));
   }
 
-  // Gentle parallax on the portrait (desktop only)
-  const portrait = document.querySelector('.portrait-frame');
-  if (portrait && !reduceMotion && window.matchMedia('(min-width: 821px)').matches) {
-    window.addEventListener('scroll', () => {
-      const y = Math.min(window.scrollY, window.innerHeight);
-      portrait.style.transform = `translateY(${y * 0.08}px)`;
-    }, { passive: true });
-  }
 })();
 
 // Lightbox for interest photos
