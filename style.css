@@ -468,3 +468,15 @@ h2, .contact h2 { font-weight: 600; letter-spacing: -0.035em; }
 .feat-flip .mosaic { order: 1; }
 .mosaic-tall { max-width: 640px; justify-self: end; width: 100%; }
 @media (max-width: 900px) { .feat-flip { grid-template-columns: 1fr; } .feat-flip .mosaic { order: 2; } .mosaic-tall { justify-self: stretch; max-width: none; } }
+
+/* Pickleball mosaic: tall action shot beside two stacked team photos */
+.mosaic-pb { grid-template-columns: 2fr 3fr; grid-template-rows: auto auto; }
+.mosaic-pb .ph { aspect-ratio: 16 / 10; }
+.mosaic-pb .ph-tall { grid-row: 1 / 3; aspect-ratio: auto; height: 100%; }
+.mosaic-pb .ph-tall img { object-position: 55% 60%; }
+.feat-link { display: inline-block; margin-top: 22px; }
+#pickleball .feat { padding-top: 0; }
+@media (max-width: 520px) {
+  .mosaic-pb { grid-template-columns: 1fr 1fr; }
+  .mosaic-pb .ph-tall { grid-row: auto; grid-column: 1 / -1; aspect-ratio: 4 / 5; height: auto; }
+}
