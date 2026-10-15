@@ -32,8 +32,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..700;1,14..32,400..600&display=swap" rel="stylesheet">
-    <link rel="preload" as="image" href="images/headshot.webp" type="image/webp">
-    <link rel="stylesheet" href="style.css?v=34">
+    <link rel="preload" as="image" href="images/hero-bg.webp" type="image/webp">
+    <link rel="stylesheet" href="style.css?v=35">
 
     <script type="application/ld+json">
     {
@@ -71,7 +71,8 @@
 
     <main id="main">
       <!-- HERO -->
-      <section id="top" class="hero">
+      <section id="top" class="hero hero-photo">
+        <div class="hero-bg" aria-hidden="true"><picture><source srcset="images/hero-bg.webp" type="image/webp"><img src="images/hero-bg.jpg" alt="" width="1600" height="1391" fetchpriority="high"></picture></div>
         <div class="wrap hero-inner">
           <div class="hero-copy">
             <p class="eyebrow hero-line" style="--d:0">Berkeley, California</p>
@@ -84,14 +85,7 @@
               <a class="btn btn-ghost" href="#contact">Get in touch</a>
             </div>
           </div>
-          <figure class="hero-portrait hero-line" style="--d:2">
-            <div class="portrait-frame">
-              <picture>
-                <source srcset="images/headshot.webp" type="image/webp">
-                <img src="images/headshot.jpg" alt="Portrait of Vinay Palta" width="1000" height="1141" fetchpriority="high">
-              </picture>
-            </div>
-          </figure>
+
         </div>
       </section>
 
@@ -308,6 +302,6 @@
       </div>
     </footer>
 
-    <script src="script.js?v=30" defer></script>
+    <script src="script.js?v=35" defer></script>
   </body>
 </html>

@@ -108,3 +108,20 @@
   box.addEventListener('click', e => { if (e.target !== img) close(); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape' && !box.hidden) close(); });
 })();
+
+// Hero parallax: photo drifts slower than the page, text eases out as you scroll
+(() => {
+  const hero = document.querySelector('.hero-photo');
+  if (!hero || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const bg = hero.querySelector('.hero-bg'), copy = hero.querySelector('.hero-copy');
+  let ticking = false;
+  const update = () => {
+    const h = hero.offsetHeight, y = Math.min(window.scrollY, h), p = y / h;
+    bg.style.transform = `translate3d(0, ${y * 0.25}px, 0) scale(${1 + p * 0.06})`;
+    copy.style.transform = `translate3d(0, ${y * -0.12}px, 0)`;
+    copy.style.opacity = String(1 - Math.min(p * 1.4, 1));
+    ticking = false;
+  };
+  window.addEventListener('scroll', () => { if (!ticking) { requestAnimationFrame(update); ticking = true; } }, { passive: true });
+  update();
+})();
