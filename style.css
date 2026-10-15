@@ -430,24 +430,3 @@ body { background: var(--navy); color: var(--ink); }
   .feat { padding: 24px; border-radius: 22px; }
   #education .edu, #education .skills { border-radius: 22px; }
 }
-
-/* EXPERIMENT: gradient cards */
-.org, .edu, .skills, .feat {
-  background:
-    radial-gradient(120% 90% at 0% 0%, rgba(58, 104, 168, .30) 0%, rgba(58,104,168,0) 55%),
-    linear-gradient(160deg, #0e2443 0%, #081a33 45%, #050f20 100%);
-  border: 1px solid transparent;
-  background-clip: padding-box;
-  position: relative;
-}
-.org::before, .edu::before, .skills::before, .feat::before {
-  content: ""; position: absolute; inset: -1px; border-radius: inherit; padding: 1px; pointer-events: none;
-  background: linear-gradient(150deg, rgba(143,179,222,.35), rgba(143,179,222,.04) 40%, rgba(143,179,222,.02) 70%, rgba(143,179,222,.18));
-  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude;
-}
-.org:hover { background:
-    radial-gradient(120% 90% at 0% 0%, rgba(58,104,168,.42) 0%, rgba(58,104,168,0) 58%),
-    linear-gradient(160deg, #10284a 0%, #091c37 45%, #050f20 100%); }
-.feat-flip { background:
-    radial-gradient(120% 90% at 100% 0%, rgba(58,104,168,.30) 0%, rgba(58,104,168,0) 55%),
-    linear-gradient(200deg, #0e2443 0%, #081a33 45%, #050f20 100%); }
