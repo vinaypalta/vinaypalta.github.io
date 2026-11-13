@@ -445,3 +445,6 @@ body { background: var(--navy); color: var(--ink); }
   .sv-reels .phones-inline { grid-template-columns: 1fr; }
   .sv-reels .phone-screen { max-width: 300px; }
 }
+.features-title { text-align: center; margin-bottom: 28px !important; }
+.sv-reels .phone figcaption { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+.partner-logo { width: 52px; height: 52px; border-radius: 13px; object-fit: cover; box-shadow: 0 0 0 1px rgba(255,255,255,.08); }
