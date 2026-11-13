@@ -428,3 +428,20 @@ body { background: var(--navy); color: var(--ink); }
   .feat { padding: 24px; border-radius: 22px; }
   #education .edu, #education .skills { border-radius: 22px; }
 }
+
+/* Content Features: four phones + partner logos */
+.features-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 24px; }
+.features-head .links-label { margin: 0; }
+.partner-logos { list-style: none; margin: 0; padding: 0; display: flex; gap: 10px; }
+.partner-logos img { width: 52px; height: 52px; border-radius: 13px; object-fit: cover; box-shadow: 0 0 0 1px rgba(255,255,255,.08); }
+.sv-reels .phones-inline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; justify-items: center; }
+.sv-reels .phone-screen { width: 100%; max-width: 250px; height: auto; aspect-ratio: 290 / 588; padding: 7px; border-radius: 38px; }
+.sv-reels .phone-screen::before { top: 15px; width: 70px; height: 21px; margin-left: -35px; }
+.sv-reels .screen { border-radius: 31px; padding-top: 34px; }
+.sv-reels .screen .status { top: 11px; left: 22px; font-size: 12px; }
+.sv-reels .phone { width: 100%; }
+@media (max-width: 1000px) { .sv-reels .phones-inline { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) {
+  .sv-reels .phones-inline { grid-template-columns: 1fr; }
+  .sv-reels .phone-screen { max-width: 300px; }
+}
